@@ -23,7 +23,7 @@ const { developmentChains, networkConfig } = require("../../helper-hardhat-confi
                   const raffleState = await raffle.getRaffleState()
                   const interval = await raffle.getInterval()
                   assert.equal(raffleState.toString(), "0") //we will get the raffle state in string otherwise it will turn into a uint256 as it will return 0/1
-                  assert.equal(interval.toString(), networkConfig[chainId]["Interval"]) //we are getting "interval" from chainId from helper hardhat config
+                  assert.equal(interval.toString(), networkConfig[chainId]["interval"]) //we are getting "interval" from chainId from helper hardhat config
               })
           })
       })

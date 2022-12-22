@@ -19,12 +19,12 @@ module.exports = {
             chainId: 31337,
             blockConfirmations: 1,
         },
-        goerli: {
-            chainId: 5,
-            blockConfirmations: 6,
-            url: GOERLI_RPC_URL,
-            accounts: [PRIVATE_KEY],
-        },
+        // goerli: {
+        //     chainId: 5,
+        //     blockConfirmations: 6,
+        //     url: GOERLI_RPC_URL,
+        //     accounts: [PRIVATE_KEY],
+        // },
     },
     solidity: "0.8.7",
     namedAccounts: {
@@ -34,5 +34,12 @@ module.exports = {
         player: {
             default: 1,
         },
+    },
+    gasReporter: {
+        enabled: false,
+        currency: "USD",
+        outputFile: "gas-report.txt",
+        noColors: true,
+        // coinmarketcap: process.env.COINMARKETCAP_API_KEY,
     },
 }
